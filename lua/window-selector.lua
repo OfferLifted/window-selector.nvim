@@ -36,7 +36,9 @@ function M.select_window()
 		vim.api.nvim_set_current_win(win_numbers[key])
 	else
 		restore_statuslines()
-		vim.api.nvim_echo({ { "Invalid selection", "ErrorMsg" } }, true, {})
+		return
+
+		-- vim.api.nvim_echo({ { "Invalid selection", "ErrorMsg" } }, true, {})
 	end
 end
 
